@@ -1,11 +1,16 @@
 {
   "ids": {
-    "Todo": 3
+    "Todo": 4,
+    "TodoList": 2
   },
   "models": {
     "Todo": {
       "1": "{\"id\":1,\"title\":\"string\",\"desc\":\"string\",\"isComplete\":true}",
-      "2": "{\"title\":\"sdfsd2\",\"desc\":\"string\",\"isComplete\":true,\"id\":2}"
+      "2": "{\"title\":\"sdfsd2\",\"desc\":\"string\",\"isComplete\":true,\"id\":2}",
+      "3": "{\"title\":\"string\",\"desc\":\"string\",\"isComplete\":true,\"remindAtAddress\":\"2006 sul ross, houston, tx\",\"remindAtGeo\":\"string\",\"todoListId\":1,\"id\":3}"
+    },
+    "TodoList": {
+      "1": "{\"title\":\"grocery list\",\"id\":1}"
     }
   }
 }
