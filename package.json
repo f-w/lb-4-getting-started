@@ -30,6 +30,8 @@
     "posttest": "npm run lint",
     "test:dev": "lb-mocha --allow-console-logs DIST/test/**/*.js && npm run posttest",
     "prestart": "npm run build",
+    "predebug": "npm run build",
+    "debug": "node --nolazy --inspect-brk=9229 index.js",
     "start": "node .",
     "prepublishOnly": "npm run test"
   },
