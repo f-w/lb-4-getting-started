@@ -3,9 +3,10 @@ import { ApplicationConfig } from '@loopback/core';
 import { RepositoryMixin } from '@loopback/repository';
 import { RestApplication, RestServer } from '@loopback/rest';
 import { MySequence } from './sequence';
+import { ServiceMixin } from '@loopback/service-proxy';
 
 export class TodoListApplication extends BootMixin(
-  RepositoryMixin(RestApplication),
+  ServiceMixin(RepositoryMixin(RestApplication)),
 ) {
   constructor(options?: ApplicationConfig) {
     super(options);
