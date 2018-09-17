@@ -1,10 +1,10 @@
-import {Lb4GettingStartedApplication} from './application';
-import {ApplicationConfig} from '@loopback/core';
+import { TodoListApplication } from './application';
+import { ApplicationConfig } from '@loopback/core';
 
-export {Lb4GettingStartedApplication};
+export { TodoListApplication };
 
 export async function main(options: ApplicationConfig = {}) {
-  const app = new Lb4GettingStartedApplication(options);
+  const app = new TodoListApplication(options);
   await app.boot();
   await app.start();
 

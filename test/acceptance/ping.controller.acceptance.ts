@@ -1,9 +1,9 @@
-import {createClientForHandler, supertest} from '@loopback/testlab';
-import {RestServer} from '@loopback/rest';
-import {Lb4GettingStartedApplication} from '../..';
+import { createClientForHandler, supertest } from '@loopback/testlab';
+import { RestServer } from '@loopback/rest';
+import { TodoListApplication } from '../..';
 
 describe('PingController', () => {
-  let app: Lb4GettingStartedApplication;
+  let app: TodoListApplication;
   let server: RestServer;
   let client: supertest.SuperTest<supertest.Test>;
 
@@ -29,7 +29,7 @@ describe('PingController', () => {
   });
 
   function givenAnApplication() {
-    app = new Lb4GettingStartedApplication({
+    app = new TodoListApplication({
       rest: {
         port: 0,
       },

@@ -1,14 +1,13 @@
-import {BootMixin} from '@loopback/boot';
-import {ApplicationConfig} from '@loopback/core';
-import {RepositoryMixin} from '@loopback/repository';
-import {RestApplication} from '@loopback/rest';
-import {ServiceMixin} from '@loopback/service-proxy';
-import {MySequence} from './sequence';
+import { BootMixin } from '@loopback/boot';
+import { ApplicationConfig } from '@loopback/core';
+import { RepositoryMixin } from '@loopback/repository';
+import { RestApplication, RestServer } from '@loopback/rest';
+import { MySequence } from './sequence';
 
-export class Lb4GettingStartedApplication extends BootMixin(
-  ServiceMixin(RepositoryMixin(RestApplication)),
+export class TodoListApplication extends BootMixin(
+  RepositoryMixin(RestApplication),
 ) {
-  constructor(options: ApplicationConfig = {}) {
+  constructor(options?: ApplicationConfig) {
     super(options);
 
     // Set up the custom sequence
@@ -24,5 +23,14 @@ export class Lb4GettingStartedApplication extends BootMixin(
         nested: true,
       },
     };
+  }
+
+  async start() {
+    await super.start();
+
+    const server = await this.getServer(RestServer);
+    const port = await server.get<number>('rest.port');
+    console.log(`Server is running at http://127.0.0.1:${port}`);
+    console.log(`Try http://127.0.0.1:${port}/ping`);
   }
 }
