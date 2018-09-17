@@ -1,0 +1,9 @@
+{
+	"folders": [{
+		"path": "."
+	}],
+	"settings": {
+		"editor.tabCompletion": true,
+		"typescript.tsdk": "./node_modules/typescript/lib"
+	}
+}
