@@ -1,7 +1,7 @@
 {
   "name": "calculator",
   "connector": "soap",
-  "url": "http://lb4ws.eycgrupo.com/calculator",
+  "url": "http://lb4ws.eycgrupo.com/calculator/",
   "wsdl": "http://lb4ws.eycgrupo.com/calculator/?wsdl",
   "remotingEnabled": true,
   "operations": {
