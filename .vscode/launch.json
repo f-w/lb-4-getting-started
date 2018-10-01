@@ -19,7 +19,7 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch via NPM",
+            "name": "root",
             "runtimeExecutable": "npm",
             "runtimeArgs": [
                 "run-script",
@@ -27,16 +27,6 @@
             ],
             "port": 9229,
             "timeout": 30000,
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Launch Program",
-            "program": "${workspaceFolder}\\index.js",
-            "outFiles": [
-                "${workspaceFolder}/**/*.js"
-            ],
-            "cwd": "${workspaceFolder}",
         }
     ]
 }
